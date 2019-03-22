@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="RideComfortUC.Views.StochasticInput02"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:loc="clr-namespace:RideComfortUC.ViewModels"
+             xmlns:local="clr-namespace:RideComfortUC.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="LabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Width" Value="40"/>
+        </Style>
+        <Style x:Key="tbStyle" TargetType="TextBlock">
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="Background" Value="LightBlue"/>
+        </Style>
+        <!--<ControlTemplate x:Key="DataGridControlTemplate1" TargetType="{x:Type DataGrid}"/>-->
+    </UserControl.Resources>
+    <Viewbox>
+        <Grid Width="260">
+            <Label Content="座椅" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource LabelStyle}}"/>
+            <Label Content="靠背" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource LabelStyle}}"/>
+            <Label Content="脚" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource LabelStyle}}"/>
+            <Label Content="X" HorizontalAlignment="Left" Margin="60,25,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="Y" HorizontalAlignment="Left" Margin="60,50,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="Z" HorizontalAlignment="Left" Margin="60,75,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="X" HorizontalAlignment="Left" Margin="60,110,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="Y" HorizontalAlignment="Left" Margin="60,135,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="Z" HorizontalAlignment="Left" Margin="60,160,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="X" HorizontalAlignment="Left" Margin="60,195,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="Y" HorizontalAlignment="Left" Margin="60,220,0,0" VerticalAlignment="Top" Width="30"/>
+            <Label Content="Z" HorizontalAlignment="Left" Margin="60,245,0,0" VerticalAlignment="Top" Width="30"/>
+            <TextBlock Name="textBlock01" HorizontalAlignment="Left" Margin="100,30,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[0][0]}"/>
+            <TextBlock Name="textBlock02" HorizontalAlignment="Left" Margin="100,55,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[0][1]}"/>
+            <TextBlock Name="textBlock03" HorizontalAlignment="Left" Margin="100,80,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[0][2]}"/>
+            <TextBlock Name="textBlock04" HorizontalAlignment="Left" Margin="100,115,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[1][0]}"/>
+            <TextBlock Name="textBlock05" HorizontalAlignment="Left" Margin="100,140,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[1][1]}"/>
+            <TextBlock Name="textBlock06" HorizontalAlignment="Left" Margin="100,165,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[1][2]}"/>
+            <TextBlock Name="textBlock07" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[2][0]}"/>
+            <TextBlock Name="textBlock08" HorizontalAlignment="Left" Margin="100,225,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[2][1]}"/>
+            <TextBlock Name="textBlock09" HorizontalAlignment="Left" Margin="100,250,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=RMS[2][2]}"/>
+            <Label Content="单轴向RMS" HorizontalAlignment="Left" Margin="100,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="总RMS" HorizontalAlignment="Left" Margin="200,5,0,0" VerticalAlignment="Top"/>
+            <TextBlock Name="textBlock11" HorizontalAlignment="Left" Margin="190,55,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=TotRms[0]}"/>
+            <TextBlock Name="textBlock12" HorizontalAlignment="Left" Margin="190,140,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=TotRms[1]}"/>
+            <TextBlock Name="textBlock13" HorizontalAlignment="Left" Margin="190,225,0,0" VerticalAlignment="Top" Style="{Binding Source={StaticResource tbStyle}}" Text="{Binding Path=TotRms[2]}"/>
+        </Grid>
+    </Viewbox>
+</UserControl>
